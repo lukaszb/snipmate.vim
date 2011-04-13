@@ -84,3 +84,20 @@ snippet ifmain
 # __magic__
 snippet _
 	__${1:init}__${2}
+
+# Django snippets
+# model
+snippet model
+	class ${1:ModelName}(models.Model):
+		${3}
+		def __unicode__(self):
+			return ${2:self.name}
+snippet field
+	${1:field_name} = models.${2:FieldClass}(${3})
+snippet main
+	if __name__ == '__main__':
+		${1:main()}
+snippet pdb
+	import pdb; pdb.set_trace()
+snippet ipdb
+	import ipdb; ipdb.set_trace()
